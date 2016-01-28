@@ -1,0 +1,29 @@
+Why lisp/scheme?
+
+See XKCD god comic
+See Land of lisp comic
+See lisp quotes by everybody
+See everything written by Paul Graham
+See intro in book by Peter Seibel
+See SICP
+See QUOTES
+See BLUB (Graham)
+
+Why NOT?
+- Dynamic typing may not be for all
+- Many dislike the s-expressions. Of course, they are WRONG.
+
+Languages and their implementations
+- Java/C/C++: Standards, many commercial implementations, high performance,
+  industry support
+- Haskell/Perl/Ruby/Python: Standards, ONE de-facto implementation, a few other
+  implementations, large collection of portable libraries
+- Javascript: Standards, several industry-backed implementations
+
+=> Scheme: Standardized, NO de-factor implementation,
+           about as many implementations as there are scheme programmers
+           only ONE commercial implementation (chez)
+
+
+
+

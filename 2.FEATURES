@@ -1,0 +1,40 @@
+Lisp was the first programming language that had
+
+- A garbage collector (invented by McCarthy)
+
+- Dynamic types
+
+- An if statement (!)
+
+- A homoiconic syntax
+
+- ... probably more as well, as it is SO old
+
+Distinguishing features of Lisp TODAY
+
+- S-expressions, nearly syntaxless
+- Almost everything is a function, and almost everything is first-class
+- A strong macro system
+- Symbolic computation
+
+Distinguishing features of Scheme, apart from those above
+
+- A minimalist language
+  - The standards range from 50 to 80 pages long
+  - The ENTIRE language can be built form only eight primitives:
+    lambda, set!, if, syntax-rules, eval, apply
+
+- Guaranteed tail call optimization / elimination
+
+- First-class continuations (more on this later)
+
+- Hygienic macros
+
+Most Scheme/Lisp IMPLEMENTATIONS also provide the following features
+
+- First class environments
+- Module systems (standardised since R6RS, new one in R7RS)
+- Low-level macros (both hygienic and unhygienic)
+- Object orientation, usually with a meta-object protocol
+- Some form of concurrency
+

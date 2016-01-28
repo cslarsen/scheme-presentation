@@ -1,0 +1,180 @@
+SOURCES:
+- http://ccil.org/~cowan/scheme-2011-09.pdf
+- r7rs spec: r7rs.com
+
+What I want to discuss
+
+- Quotes
+  - Perlis, pyramid/organic
+  - John Foderaro programmable programming language
+  - Alan Kay, Maxwell
+  - Raymond?
+  - Norvig on aspects, MOP-guy on aspects
+  - etc
+
+- What I don't want in a language
+  - I don't want sprintf("SELECT * FROM FOO WHERE NAME='%s'", name);
+  - I don't want sprintf("<html><body><p>%s</p></body></html>", text);
+  - I don't want strings that the compiler HAS NO IDEA HOW TO INTERPRET
+  - Same with regexes
+
+- What's the same in ALL languages?
+  - The AST
+  - Show java/c/c++/python/etc code, show its AST
+
+- What I want
+  - I'd like to code directly in the AST
+  - Show "The Matrix" shot were Neo sees the Matrix
+  - I want to code closer to the compiler
+  - I want (sql (select * from foo where name = (value name))
+  - I want (html5 (html (body (p (value text)))))
+
+=> In lisp/scheme you can (mostly) do this
+
+=> Boring stuff, important is how old the language is,
+   and that its close to "executable mathematics" (add quote on that)
+- History
+  - lambda calculus 1932
+  - lisp 1958
+  - scheme 1975
+  - r(n<7)rs
+  - r7rs-small 2013
+  - r7rs-large 201x
+  - lisp vs scheme (short)
+    - lisp1 vs lisp2
+    - 50-80 pages vs 1300
+    - industrial vs lightweight
+
+==> Scheme 101
+
+- Fundamentals
+  - s-expressions,
+    homoiconicity,
+    symbolic,
+    everything-is-an-expression/procedure/macro,
+    dynamic typing,
+    lexical scope,
+    dynamic scope,
+    continuations,
+    macros/transforms,
+    almost everything is first-class (except macros, possibly environments),
+    ffi,
+    compilable to efficient code (e.g. benchmarks game),
+    tail call elimintation/optimization,
+  - standard is 50-80 pages
+  - you can build ALL of scheme on just 8 primitives:
+    <see john cowan's presentation, think it stems from the very first r(n)rs)
+  - almost syntaxless
+  - when you use it, it'll start to fade away, just as with
+    subject-object-verb languages, or how spaces fade away when reading
+  - sussman called it the "native language of the virtual machine"
+    (don't quite get this yet, but I guess you can easily use a stack
+    machine as interpreter, you can walk the code tree)
+
+- Tiny syntactic core:
+  - variables
+  - constants
+  - procedure calls
+  - quote
+  - if
+  - lambda
+  - set!
+
+==> Coding time
+
+- Show some simple examples
+
+==> Programmable programming language
+- it's a stretch, but w/reader macros, compile-time evaluation, you can do
+  most stuff
+- you CAN build a lot of stuff on top of scheme, easily, and that's what
+  we'll see next
+
+- show how to write the following in pure, understandable scheme code:
+  - control evaluation, e.g. with-files as a resource handling technique
+  - lazy evaluation
+  - exception-handling
+  - goto statements
+  - object-orientation (not soooo simple currently)
+  - green threads (find an example)
+=> more:
+  - restartable-exceptions
+  - streams (lazy eval, infinite streams)
+  - coroutines
+=> even more:
+  - math-parser
+  - calculus
+  - derivation
+  - for-loops
+  - switch-case
+  - cond
+  - unless
+  - dynamic-wind (requires special stack access though)
+  - guards
+  - concurrency
+  - module-system (requires 1st class environments)
+  - meta-circular-evaluator (<== show this!)
+  - type system (! it can be done)
+  - compiler
+  - jit-compiler
+  - aot-compiler
+  - static-analyzer
+  - partial evaluation
+  - aspect oriantation
+  - bnf-parser
+  - new languages (e.g. arc)
+  - import javascript
+  - import ffi
+  - import java
+  - etc
+
+==> Other stuff you can implement in scheme source code,
+- think "(import (feature))"
+
+=> A little bit about implementing scheme
+- meta circular evaluator
+- how to implement lexical scope (environments w/pointer to parent/outer)
+- how to implement macro systems (right after parse time)
+- how to implement continuations (stack on heap, spaghetti stack, segmented
+  stacks, continuation passing style CPS, etc)
+- how to implement tail call elimination (goto w/parameters)
+- the parser (recursive descent LL(2) ?)
+- optimization:
+  - lambda lifting
+  - constant folding
+  - partial evaluation
+  - random access lists w/b-tree and unrolled lists on cacheline size
+  - etc
+- variants
+- gc: mark and sweep, whatever,
+  - could actually do (import (gc-mark-and-sweep))
+  - could potentially use several different gc's on same program
+    - dont know if it would be efficient
+
+TODO:
+
+==> Who uses scheme? lisp?
+  - nobody, many, unseen code
+  - good example is the naughty dog game and gool/goal, it was ahead of its
+    time
+  - orbitz, etc
+
+==> Why not typing? You can BUILD a type-system on top of it
+
+=> Limits of lisp
+- quote on how blub lang takes feature from lisp every decade
+- when they finally take the s-expression they will themselves become lisp
+  :) (peter seibel? norvig? graham?) <- must be done because of macros,
+  current non-homoiconic macro systems are inefficient for the user
+
+=> Boring stuff (put this later)
+- Books and sites
+  - SICP
+  - The Little Schemer
+  - Paul Graham
+  - Land of lisp
+  - More:
+    - Queinnec
+    - The Art of the Meta-Object protocol
+    - etc.
+

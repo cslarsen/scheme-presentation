@@ -1,0 +1,2 @@
+%: %.scm
+	chibi-scheme -Iinclude $<

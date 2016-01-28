@@ -1,0 +1,14 @@
+In Scheme you can implement the following FROM SCRATCH, in PURE
+SCHEME CODE:
+
+- Object orientation
+  - Meta-object protocol
+- Exception handling
+  - Upward exceptions (try-catch)
+  - Restartable exceptions (try-catch-restart)
+- Concurrency
+  - Light-weight threads (aka green threads)
+  - Channels
+
+... "In lisp, the easy is difficult, but the impossible is possible"
+- who said this?

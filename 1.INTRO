@@ -1,0 +1,48 @@
+A brief history of Scheme
+=========================
+
+~ -13.798B years ago
+--------------------
+
+The universe as we know it begins.
+
+1936 Lambda calculus, Church-Turing thesis
+------------------------------------------
+
+Alonzo Church (Princeton) publishes solution to David Hilbert's
+"Entscheidungsproblem" shortly before Alan Turing.
+
+This is equivalent to the Turing machine, but is of a more mathematical
+nature than the mechanical Turing machine.
+
+1957 Fortran
+------------
+
+1958 LISP
+---------
+
+John McCarthy (MIT) invents LISP.  It is closely based on lambda calculus,
+and is therefore Turing complete.
+
+1960 Algol60, lexical scope
+---------------------------
+
+1975 Scheme
+-----------
+
+Gerald Jay Sussman and Guy L. Steele, Jr. (MIT) invents SCHEMER, but the ITS
+system only allows filenames of up to six characters so the executable name
+SCHEME stuck.
+
+Scheme was a successor to the other Lisp-like languages Planner and
+Conniver, and attempted to model Carl Hewitt's actor model -- a model of
+concurrent computation.
+
+1978 The Revised Report on Scheme
+1985 The Revised Revised Report on Scheme
+1986 R^3RS
+1991 R4RS, IEEE 1178-1990
+1998 R5RS
+2007 R6RS
+2013 R7RS-small
+201x R7RS-large
