@@ -1,3 +1,6 @@
+;; Example on how to do resource management
+;; By Christian Stigen Larsen
+
 (cond-expand
   (r7rs
     (import (scheme base)

@@ -1,3 +1,6 @@
+;; Shows an exception mechanism implemented with call/cc and macros
+;; By Christian Stigen Larsen
+
 (import (scheme base)
         (scheme write))
 
